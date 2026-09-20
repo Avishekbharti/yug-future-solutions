@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>YUG FUTURE SOLUTIONS | Electronics & Home Appliances</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f6f7f9;
+    color:#111827;
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(255,255,255,.96);
+    border-bottom:1px solid #e5e7eb;
+    backdrop-filter:blur(10px);
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    padding:18px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:800;
+    letter-spacing:.5px;
+}
+
+.logo span{
+    color:#2563eb;
+}
+
+nav a{
+    text-decoration:none;
+    color:#374151;
+    margin-left:25px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.hero{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 24px 60px;
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:40px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 14px;
+    background:#e8f0ff;
+    color:#1d4ed8;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:700;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-size:56px;
+    line-height:1.05;
+    margin-bottom:20px;
+    letter-spacing:-2px;
+}
+
+.hero h1 span{
+    color:#2563eb;
+}
+
+.hero p{
+    font-size:18px;
+    line-height:1.7;
+    color:#6b7280;
+    max-width:620px;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 22px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:700;
+    font-size:15px;
+}
+
+.primary{
+    background:#111827;
+    color:white;
+}
+
+.secondary{
+    background:white;
+    color:#111827;
+    border:1px solid #d1d5db;
+}
+
+.hero-card{
+    background:linear-gradient(145deg,#111827,#26354d);
+    min-height:330px;
+    border-radius:28px;
+    padding:35px;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    box-shadow:0 25px 60px rgba(0,0,0,.18);
+}
+
+.hero-card .big{
+    font-size:75px;
+    margin-bottom:20px;
+}
+
+.hero-card h2{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.hero-card p{
+    color:#d1d5db;
+    margin:0;
+    font-size:14px;
+}
+
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 24px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#6b7280;
+}
+
+.categories{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.category{
+    background:white;
+    padding:30px 20px;
+    border-radius:18px;
+    text-align:center;
+    border:1px solid #e5e7eb;
+    transition:.25s;
+}
+
+.category:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.icon{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.category h3{
+    margin-bottom:8px;
+}
+
+.category p{
+    color:#6b7280;
+    font-size:13px;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.product{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    border:1px solid #e5e7eb;
+}
+
+.product-image{
+    height:190px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#eef1f5;
+    font-size:70px;
+}
+
+.product-info{
+    padding:20px;
+}
+
+.product-info small{
+    color:#6b7280;
+}
+
+.product-info h3{
+    margin:8px 0;
+    font-size:18px;
+}
+
+.price{
+    color:#2563eb;
+    font-weight:800;
+    margin:12px 0;
+}
+
+.enquiry{
+    display:block;
+    text-align:center;
+    background:#111827;
+    color:white;
+    text-decoration:none;
+    padding:11px;
+    border-radius:9px;
+    font-size:13px;
+    font-weight:700;
+}
+
+.area{
+    background:#111827;
+    color:white;
+    border-radius:28px;
+    padding:55px;
+    text-align:center;
+}
+
+.area h2{
+    font-size:34px;
+    margin-bottom:15px;
+}
+
+.area p{
+    color:#d1d5db;
+    line-height:1.7;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact h2{
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+.contact p{
+    color:#6b7280;
+    margin-bottom:25px;
+}
+
+footer{
+    background:#111827;
+    color:#9ca3af;
+    padding:30px 24px;
+    text-align:center;
+    font-size:13px;
+}
+
+@media(max-width:800px){
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+        padding-top:50px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .categories{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:500px){
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .categories,
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .area{
+        padding:35px 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="nav">
+        <div class="logo">YUG <span>FUTURE SOLUTIONS</span></div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+
+    <div>
+        <div class="badge">PUNE & SURROUNDING AREAS</div>
+
+        <h1>
+            Smart Deals on
+            <span>Electronics.</span>
+        </h1>
+
+        <p>
+            Discover quality home appliances and electronics at
+            competitive prices. Serving Pune and nearby areas with
+            reliable delivery and easy enquiry.
+        </p>
+
+        <div class="buttons">
+            <a class="btn primary" href="#products">
+                Explore Products
+            </a>
+
+            <a class="btn secondary"
+               href="https://wa.me/919999999999">
+                WhatsApp Us
+            </a>
+        </div>
+    </div>
+
+    <div class="hero-card">
+        <div class="big">❄️</div>
+        <h2>Best Price. Easy Enquiry.</h2>
+        <p>
+            Tell us what you need and we'll check the latest
+            price and availability for you.
+        </p>
+    </div>
+
+</section>
+
+
+<section id="categories">
+
+    <div class="section-title">
+        <h2>Shop by Category</h2>
+        <p>Home appliances and electronics for every requirement.</p>
+    </div>
+
+    <div class="categories">
+
+        <div class="category">
+            <div class="icon">❄️</div>
+            <h3>Air Conditioners</h3>
+            <p>Split & window AC options</p>
+        </div>
+
+        <div class="category">
+            <div class="icon">🧊</div>
+            <h3>Refrigerators</h3>
+            <p>Different sizes and models</p>
+        </div>
+
+        <div class="category">
+            <div class="icon">🧺</div>
+            <h3>Washing Machines</h3>
+            <p>Top load & front load</p>
+        </div>
+
+        <div class="category">
+            <div class="icon">💨</div>
+            <h3>Air Coolers</h3>
+            <p>Home & commercial cooling</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="products">
+
+    <div class="section-title">
+        <h2>Featured Products</h2>
+        <p>Prices and availability confirmed on enquiry.</p>
+    </div>
+
+    <div class="products">
+
+        <div class="product">
+            <div class="product-image">❄️</div>
+
+            <div class="product-info">
+                <small>Air Conditioner</small>
+                <h3>1.5 Ton Split AC</h3>
+                <div class="price">Get Best Price</div>
+
+                <a class="enquiry"
+                   href="https://wa.me/919999999999?text=Hello%20YUG%20Future%20Solutions%2C%20I%20am%20interested%20in%201.5%20Ton%20Split%20AC.">
+                   Check Availability
+                </a>
+            </div>
+        </div>
+
+
+        <div class="product">
+            <div class="product-image">🧊</div>
+
+            <div class="product-info">
+                <small>Refrigerator</small>
+                <h3>Double Door Refrigerator</h3>
+                <div class="price">Get Best Price</div>
+
+                <a class="enquiry"
+                   href="https://wa.me/919999999999?text=Hello%20YUG%20Future%20Solutions%2C%20I%20am%20interested%20in%20Double%20Door%20Refrigerator.">
+                   Check Availability
+                </a>
+            </div>
+        </div>
+
+
+        <div class="product">
+            <div class="product-image">🧺</div>
+
+            <div class="product-info">
+                <small>Washing Machine</small>
+                <h3>Fully Automatic Washing Machine</h3>
+                <div class="price">Get Best Price</div>
+
+                <a class="enquiry"
+                   href="https://wa.me/919999999999?text=Hello%20YUG%20Future%20Solutions%2C%20I%20am%20interested%20in%20Washing%20Machine.">
+                   Check Availability
+                </a>
+            </div>
+        </div>
+
+
+        <div class="product">
+            <div class="product-image">💨</div>
+
+            <div class="product-info">
+                <small>Air Cooler</small>
+                <h3>Large Air Cooler</h3>
+                <div class="price">Get Best Price</div>
+
+                <a class="enquiry"
+                   href="https://wa.me/919999999999?text=Hello%20YUG%20Future%20Solutions%2C%20I%20am%20interested%20in%20Air%20Cooler.">
+                   Check Availability
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <div class="area">
+
+        <h2>Serving Pune & Nearby Areas</h2>
+
+        <p>
+            We serve customers across Pune and selected locations
+            within approximately 50–100 km, subject to product,
+            delivery requirements and availability.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="contact" class="contact">
+
+    <h2>Looking for a Specific Product?</h2>
+
+    <p>
+        Send us your requirement. We'll check the best available
+        option and share the price with you.
+    </p>
+
+    <div class="buttons" style="justify-content:center;">
+
+        <a class="btn primary"
+           href="https://wa.me/919999999999">
+            WhatsApp Enquiry
+        </a>
+
+        <a class="btn secondary"
+           href="tel:+917276390872">
+            Call Us
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    © 2026 YUG FUTURE SOLUTIONS. All rights reserved.
+
+</footer>
+
+</body>
+</html>
