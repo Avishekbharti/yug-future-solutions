@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,7 @@
 
 <title>YUG FUTURE SOLUTIONS | Electronics Deals in Pune & Pimpri-Chinchwad</title>
 
-<meta name="description" content="YUG FUTURE SOLUTIONS offers ACs, Refrigerators, Washing Machines, Air Coolers, Ovens, Dishwashers, Air Fryers and more electronics across Pune and Pimpri-Chinchwad. Selected products available at up to 30% below prevailing online prices.">
+<meta name="description" content="YUG FUTURE SOLUTIONS offers ACs, Refrigerators, Washing Machines, Air Coolers, Ovens, Dishwashers, Air Fryers and more electronics across Pune and Pimpri-Chinchwad.">
 
 <style>
 
@@ -38,10 +39,10 @@ a{
   margin:auto;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 header{
-  background:#ffffff;
+  background:#fff;
   border-bottom:1px solid #e6e8ec;
   position:sticky;
   top:0;
@@ -95,8 +96,21 @@ header{
   border-radius:8px;
 }
 
+/* MOBILE MENU BUTTON */
 
-/* HERO */
+.menu-toggle{
+  display:none;
+  background:#175cd3;
+  color:#fff;
+  border:0;
+  border-radius:8px;
+  padding:10px 14px;
+  font-size:13px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+/* ================= HERO ================= */
 
 .hero{
   background:
@@ -182,8 +196,7 @@ header{
   margin:0;
 }
 
-
-/* TRUST BAR */
+/* ================= TRUST BAR ================= */
 
 .trust-bar{
   background:#fff;
@@ -216,8 +229,7 @@ header{
   color:#667085;
 }
 
-
-/* SECTIONS */
+/* ================= SECTIONS ================= */
 
 section{
   padding:78px 0;
@@ -241,8 +253,7 @@ section{
   margin:auto;
 }
 
-
-/* CATEGORIES */
+/* ================= CATEGORIES ================= */
 
 .categories{
   display:grid;
@@ -279,8 +290,7 @@ section{
   color:#667085;
 }
 
-
-/* PRODUCTS */
+/* ================= PRODUCTS ================= */
 
 .products{
   display:grid;
@@ -337,9 +347,6 @@ section{
   font-weight:700;
 }
 
-
-/* MORE PRODUCTS */
-
 .more-products{
   margin-top:25px;
   text-align:center;
@@ -350,8 +357,7 @@ section{
   font-size:14px;
 }
 
-
-/* PRICING USP */
+/* ================= PRICING USP ================= */
 
 .pricing{
   background:#0f172a;
@@ -403,12 +409,7 @@ section{
   font-size:14px;
 }
 
-.pricing-list li:last-child{
-  border-bottom:0;
-}
-
-
-/* INVENTORY MODEL */
+/* ================= INVENTORY ================= */
 
 .inventory{
   background:#fff;
@@ -465,8 +466,7 @@ section{
   font-size:13px;
 }
 
-
-/* SOURCING */
+/* ================= SOURCING ================= */
 
 .sourcing{
   background:#eef4ff;
@@ -505,8 +505,7 @@ section{
   font-size:13px;
 }
 
-
-/* BRANDS */
+/* ================= BRANDS ================= */
 
 .brands{
   background:#fff;
@@ -533,15 +532,7 @@ section{
   color:#344054;
 }
 
-.brand small{
-  display:block;
-  font-size:9px;
-  font-weight:500;
-  color:#98a2b3;
-}
-
-
-/* WHY US */
+/* ================= WHY US ================= */
 
 .why{
   background:#f7f8fa;
@@ -574,8 +565,7 @@ section{
   color:#667085;
 }
 
-
-/* AREA */
+/* ================= AREA ================= */
 
 .area{
   background:#fff;
@@ -614,8 +604,7 @@ section{
   font-weight:700;
 }
 
-
-/* CONTACT */
+/* ================= CONTACT ================= */
 
 .contact-grid{
   display:grid;
@@ -655,8 +644,7 @@ section{
   font-weight:700;
 }
 
-
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer{
   background:#101828;
@@ -674,13 +662,49 @@ footer p{
   margin-top:6px;
 }
 
-
-/* MOBILE */
+/* ================= MOBILE ================= */
 
 @media(max-width:900px){
 
+  .navbar{
+    min-height:68px;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
   .nav-links{
     display:none;
+    position:absolute;
+    top:68px;
+    left:0;
+    width:100%;
+    background:#fff;
+    border-bottom:1px solid #e4e7ec;
+    box-shadow:0 12px 25px rgba(16,24,40,.12);
+    padding:12px 5%;
+    flex-direction:column;
+    align-items:stretch;
+    gap:4px;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .nav-links a{
+    padding:13px 10px;
+    border-radius:8px;
+  }
+
+  .nav-links a:hover{
+    background:#f2f4f7;
+  }
+
+  .nav-links .nav-btn{
+    text-align:center;
+    margin-top:5px;
   }
 
   .hero-grid,
@@ -716,10 +740,12 @@ footer p{
 
 }
 
+/* ================= SMALL MOBILE ================= */
+
 @media(max-width:520px){
 
-  .navbar{
-    min-height:65px;
+  .container{
+    width:92%;
   }
 
   .logo{
@@ -730,9 +756,13 @@ footer p{
     font-size:8px;
   }
 
-  .nav-btn{
+  .menu-toggle{
     padding:9px 12px;
-    font-size:11px;
+    font-size:12px;
+  }
+
+  .nav-links{
+    top:65px;
   }
 
   .hero{
@@ -815,8 +845,8 @@ footer p{
 }
 
 </style>
-</head>
 
+</head>
 
 <body>
 
@@ -832,16 +862,25 @@ YUG FUTURE SOLUTIONS
 <span>ELECTRONICS • DEALS • SOLUTIONS</span>
 </a>
 
-<nav class="nav-links">
+<button class="menu-toggle" onclick="toggleMenu()" aria-label="Open Menu">
+☰ MENU
+</button>
 
-<a href="#products">Products</a>
-<a href="#inventory">D1 / D2</a>
-<a href="#brands">Brands</a>
-<a href="#area">Delivery</a>
-<a href="#contact">Contact</a>
+<nav class="nav-links" id="mobileMenu">
+
+<a href="#products" onclick="closeMenu()">Products</a>
+
+<a href="#inventory" onclick="closeMenu()">D1 / D2</a>
+
+<a href="#brands" onclick="closeMenu()">Brands</a>
+
+<a href="#area" onclick="closeMenu()">Delivery</a>
+
+<a href="#contact" onclick="closeMenu()">Contact</a>
 
 <a class="nav-btn"
-href="https://wa.me/917276390872?text=Hello%20YUG%20FUTURE%20SOLUTIONS%2C%20I%20want%20to%20enquire%20about%20your%20products.">
+href="https://wa.me/917276390872?text=Hello%20YUG%20FUTURE%20SOLUTIONS%2C%20I%20want%20to%20enquire%20about%20your%20products."
+onclick="closeMenu()">
 WhatsApp
 </a>
 
@@ -863,7 +902,7 @@ WhatsApp
 <h1>
 Smart Electronics.
 <br>
-<strong>Smarter Prices.</strong>
+<span>Smarter Prices.</span>
 </h1>
 
 <p>
@@ -963,94 +1002,53 @@ kitchen appliances and other electronics.
 
 <div class="categories">
 
-
 <a href="#products" class="category">
-
 <div class="category-icon">❄️</div>
-
 <h3>Air Conditioners</h3>
-
 <p>Split & other AC models</p>
-
 </a>
 
-
 <a href="#products" class="category">
-
 <div class="category-icon">🧊</div>
-
 <h3>Refrigerators</h3>
-
 <p>Multiple sizes & models</p>
-
 </a>
 
-
 <a href="#products" class="category">
-
 <div class="category-icon">🧺</div>
-
 <h3>Washing Machines</h3>
-
 <p>Top & front load</p>
-
 </a>
 
-
 <a href="#products" class="category">
-
 <div class="category-icon">💨</div>
-
 <h3>Air Coolers</h3>
-
 <p>Home & commercial</p>
-
 </a>
 
-
 <a href="#products" class="category">
-
 <div class="category-icon">🔥</div>
-
 <h3>Ovens</h3>
-
 <p>Kitchen appliance options</p>
-
 </a>
 
-
 <a href="#products" class="category">
-
 <div class="category-icon">🍽️</div>
-
 <h3>Dishwashers</h3>
-
 <p>Home dishwasher models</p>
-
 </a>
 
-
 <a href="#products" class="category">
-
 <div class="category-icon">🍟</div>
-
 <h3>Air Fryers</h3>
-
 <p>Kitchen & cooking appliances</p>
-
 </a>
-
 
 <a href="#products" class="category">
-
 <div class="category-icon">⚡</div>
-
 <h3>More Electronics</h3>
-
 <p>Ask us for available inventory</p>
-
 </a>
-
 
 </div>
 
@@ -1080,7 +1078,6 @@ of enquiry.
 
 <div class="products">
 
-
 <div class="product">
 
 <div class="product-image">❄️</div>
@@ -1089,9 +1086,7 @@ of enquiry.
 
 <h3>Air Conditioners</h3>
 
-<p>
-Different capacities, brands and models.
-</p>
+<p>Different capacities, brands and models.</p>
 
 <a class="enquire"
 href="https://wa.me/917276390872?text=Hello%2C%20I%20am%20interested%20in%20an%20Air%20Conditioner.%20Please%20share%20available%20models%20and%20best%20price.">
@@ -1111,9 +1106,7 @@ Get Best Price
 
 <h3>Refrigerators</h3>
 
-<p>
-Single door, double door and other models.
-</p>
+<p>Single door, double door and other models.</p>
 
 <a class="enquire"
 href="https://wa.me/917276390872?text=Hello%2C%20I%20am%20interested%20in%20a%20Refrigerator.%20Please%20share%20available%20models%20and%20best%20price.">
@@ -1133,9 +1126,7 @@ Get Best Price
 
 <h3>Washing Machines</h3>
 
-<p>
-Top load and front load options.
-</p>
+<p>Top load and front load options.</p>
 
 <a class="enquire"
 href="https://wa.me/917276390872?text=Hello%2C%20I%20am%20interested%20in%20a%20Washing%20Machine.%20Please%20share%20available%20models%20and%20best%20price.">
@@ -1155,9 +1146,7 @@ Get Best Price
 
 <h3>Air Coolers</h3>
 
-<p>
-Home and commercial cooling solutions.
-</p>
+<p>Home and commercial cooling solutions.</p>
 
 <a class="enquire"
 href="https://wa.me/917276390872?text=Hello%2C%20I%20am%20interested%20in%20an%20Air%20Cooler.%20Please%20share%20available%20models%20and%20best%20price.">
@@ -1167,7 +1156,6 @@ Get Best Price
 </div>
 
 </div>
-
 
 </div>
 
@@ -1245,7 +1233,7 @@ part of the inventory-level price advantage to our customers.
 </section>
 
 
-<!-- INVENTORY MODEL -->
+<!-- INVENTORY -->
 
 <section class="inventory" id="inventory">
 
@@ -1281,8 +1269,10 @@ may vary depending on the individual inventory lot.
 </p>
 
 <p>
-<strong>Product status and availability are verified before
-finalizing the order.</strong>
+<strong>
+Product status and availability are verified before
+finalizing the order.
+</strong>
 </p>
 
 </div>
@@ -1303,8 +1293,10 @@ similar non-functional cosmetic differences.
 </p>
 
 <p>
-<strong>Condition is disclosed and discussed with the customer
-before purchase.</strong>
+<strong>
+Condition is disclosed and discussed with the customer
+before purchase.
+</strong>
 </p>
 
 </div>
@@ -1356,15 +1348,10 @@ selected products.
 <div class="sourcing-points">
 
 <span>Bulk Purchased Lots</span>
-
 <span>Multiple Brands</span>
-
 <span>Lot-Based Pricing</span>
-
 <span>Fresh Inventory</span>
-
 <span>Open-Box Inventory</span>
-
 <span>Selected Customer Returns</span>
 
 </div>
@@ -1396,47 +1383,26 @@ inventory lots.
 
 <div class="brand-grid">
 
-
 <div class="brand">LLOYD</div>
-
 <div class="brand">INTEX</div>
-
 <div class="brand">LG</div>
-
 <div class="brand">CARRIER</div>
-
 <div class="brand">SAMSUNG</div>
-
 <div class="brand">IFB</div>
-
 <div class="brand">BOSCH</div>
-
 <div class="brand">GODREJ</div>
-
 <div class="brand">WHIRLPOOL</div>
-
 <div class="brand">HAIER</div>
-
 <div class="brand">MIDEA</div>
-
 <div class="brand">DAIKIN</div>
-
 <div class="brand">VOLTAS</div>
-
 <div class="brand">BLUE STAR</div>
-
 <div class="brand">PHILIPS</div>
-
 <div class="brand">PIGEON</div>
-
 <div class="brand">INALSA</div>
-
 <div class="brand">HAVELLS</div>
-
 <div class="brand">WIPRO</div>
-
 <div class="brand">AND MORE</div>
-
 
 </div>
 
@@ -1536,7 +1502,6 @@ subject to product availability and delivery requirements.
 <div class="area-list">
 
 <span>Pune</span>
-
 <span>Pimpri-Chinchwad</span>
 
 </div>
@@ -1655,36 +1620,30 @@ Chat on WhatsApp
 How It Works
 </h3>
 
-
 <div class="contact-item">
 <strong>01 —</strong>
 Tell us the product or model you need.
 </div>
-
 
 <div class="contact-item">
 <strong>02 —</strong>
 We check our current inventory.
 </div>
 
-
 <div class="contact-item">
 <strong>03 —</strong>
 We share product condition and best available price.
 </div>
-
 
 <div class="contact-item">
 <strong>04 —</strong>
 You confirm the requirement before purchase.
 </div>
 
-
 <div class="contact-item">
 <strong>05 —</strong>
 Delivery is arranged across Pune & Pimpri-Chinchwad.
 </div>
-
 
 </div>
 
@@ -1722,5 +1681,29 @@ Pune, Maharashtra • Serving Pune & Pimpri-Chinchwad
 </footer>
 
 
+<!-- MOBILE MENU SCRIPT -->
+
+<script>
+
+function toggleMenu(){
+
+  const menu = document.getElementById("mobileMenu");
+
+  menu.classList.toggle("active");
+
+}
+
+function closeMenu(){
+
+  const menu = document.getElementById("mobileMenu");
+
+  menu.classList.remove("active");
+
+}
+
+</script>
+
+
 </body>
 </html>
+```
