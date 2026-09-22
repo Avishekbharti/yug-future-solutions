@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -318,6 +318,14 @@ section{
   align-items:center;
   justify-content:center;
   font-size:68px;
+  overflow:hidden;
+}
+
+.product-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 }
 
 .product-info{
@@ -851,7 +859,7 @@ footer p{
 <body>
 
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 
 <header>
 
@@ -891,7 +899,7 @@ WhatsApp
 </header>
 
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
@@ -951,7 +959,7 @@ lot, model, condition and availability.
 </section>
 
 
-<!-- TRUST BAR -->
+<!-- ================= TRUST BAR ================= -->
 
 <div class="trust-bar">
 
@@ -982,7 +990,7 @@ lot, model, condition and availability.
 </div>
 
 
-<!-- CATEGORIES -->
+<!-- ================= CATEGORIES ================= -->
 
 <section>
 
@@ -1057,7 +1065,7 @@ kitchen appliances and other electronics.
 </section>
 
 
-<!-- PRODUCTS -->
+<!-- ================= PRODUCTS ================= -->
 
 <section id="products">
 
@@ -1065,7 +1073,7 @@ kitchen appliances and other electronics.
 
 <div class="section-title">
 
-<h2>Featured Product Categories</h2>
+<h2>Available Products</h2>
 
 <p>
 Our inventory changes regularly. Final product model,
@@ -1076,84 +1084,21 @@ of enquiry.
 </div>
 
 
-<div class="products">
+<!-- SUPABASE PRODUCTS WILL LOAD HERE -->
 
-<div class="product">
+<div class="products" id="productsContainer">
 
-<div class="product-image">❄️</div>
+<div style="grid-column:1/-1;text-align:center;padding:35px;color:#667085;">
 
-<div class="product-info">
-
-<h3>Air Conditioners</h3>
-
-<p>Different capacities, brands and models.</p>
-
-<a class="enquire"
-href="https://wa.me/917276390872?text=Hello%2C%20I%20am%20interested%20in%20an%20Air%20Conditioner.%20Please%20share%20available%20models%20and%20best%20price.">
-Get Best Price
-</a>
-
+<div style="font-size:42px;margin-bottom:10px;">
+⏳
 </div>
 
-</div>
+<h3>Loading Products...</h3>
 
-
-<div class="product">
-
-<div class="product-image">🧊</div>
-
-<div class="product-info">
-
-<h3>Refrigerators</h3>
-
-<p>Single door, double door and other models.</p>
-
-<a class="enquire"
-href="https://wa.me/917276390872?text=Hello%2C%20I%20am%20interested%20in%20a%20Refrigerator.%20Please%20share%20available%20models%20and%20best%20price.">
-Get Best Price
-</a>
-
-</div>
-
-</div>
-
-
-<div class="product">
-
-<div class="product-image">🧺</div>
-
-<div class="product-info">
-
-<h3>Washing Machines</h3>
-
-<p>Top load and front load options.</p>
-
-<a class="enquire"
-href="https://wa.me/917276390872?text=Hello%2C%20I%20am%20interested%20in%20a%20Washing%20Machine.%20Please%20share%20available%20models%20and%20best%20price.">
-Get Best Price
-</a>
-
-</div>
-
-</div>
-
-
-<div class="product">
-
-<div class="product-image">💨</div>
-
-<div class="product-info">
-
-<h3>Air Coolers</h3>
-
-<p>Home and commercial cooling solutions.</p>
-
-<a class="enquire"
-href="https://wa.me/917276390872?text=Hello%2C%20I%20am%20interested%20in%20an%20Air%20Cooler.%20Please%20share%20available%20models%20and%20best%20price.">
-Get Best Price
-</a>
-
-</div>
+<p style="margin-top:5px;">
+Please wait while we check the latest inventory.
+</p>
 
 </div>
 
@@ -1175,7 +1120,7 @@ Small Appliances • Electronics & More
 </section>
 
 
-<!-- PRICING USP -->
+<!-- ================= PRICING USP ================= -->
 
 <section class="pricing">
 
@@ -1233,7 +1178,7 @@ part of the inventory-level price advantage to our customers.
 </section>
 
 
-<!-- INVENTORY -->
+<!-- ================= INVENTORY ================= -->
 
 <section class="inventory" id="inventory">
 
@@ -1318,7 +1263,7 @@ is communicated before the sale.
 </section>
 
 
-<!-- SOURCING -->
+<!-- ================= SOURCING ================= -->
 
 <section class="sourcing">
 
@@ -1363,7 +1308,7 @@ selected products.
 </section>
 
 
-<!-- BRANDS -->
+<!-- ================= BRANDS ================= -->
 
 <section class="brands" id="brands">
 
@@ -1411,7 +1356,7 @@ inventory lots.
 </section>
 
 
-<!-- WHY US -->
+<!-- ================= WHY US ================= -->
 
 <section class="why">
 
@@ -1482,7 +1427,7 @@ requirement and we will check current availability.
 </section>
 
 
-<!-- DELIVERY -->
+<!-- ================= DELIVERY ================= -->
 
 <section class="area" id="area">
 
@@ -1513,7 +1458,7 @@ subject to product availability and delivery requirements.
 </section>
 
 
-<!-- WARRANTY -->
+<!-- ================= WARRANTY ================= -->
 
 <section>
 
@@ -1559,7 +1504,7 @@ before finalizing an order.
 </section>
 
 
-<!-- CONTACT -->
+<!-- ================= CONTACT ================= -->
 
 <section id="contact">
 
@@ -1654,7 +1599,7 @@ Delivery is arranged across Pune & Pimpri-Chinchwad.
 </section>
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -1681,7 +1626,7 @@ Pune, Maharashtra • Serving Pune & Pimpri-Chinchwad
 </footer>
 
 
-<!-- MOBILE MENU SCRIPT -->
+<!-- ================= MOBILE MENU SCRIPT ================= -->
 
 <script>
 
@@ -1700,6 +1645,293 @@ function closeMenu(){
   menu.classList.remove("active");
 
 }
+
+</script>
+
+
+<!-- ================= SUPABASE ================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+
+/*
+  YUG FUTURE SOLUTIONS
+  Supabase Product Database Connection
+*/
+
+const SUPABASE_URL =
+  "https://qzpxayekzcnmbqtjoqrg.supabase.co";
+
+const SUPABASE_KEY =
+  "sb_publishable__0yuI-P-8-QUo6M6RhdKCw_pxWHCEOF";
+
+
+const supabaseClient = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);
+
+
+/* ================= LOAD PRODUCTS ================= */
+
+async function loadProducts(){
+
+  const productsContainer =
+    document.getElementById("productsContainer");
+
+  if(!productsContainer){
+    return;
+  }
+
+
+  try{
+
+    const { data, error } = await supabaseClient
+      .from("Products")
+      .select("*")
+      .eq("status", "available")
+      .order("created_at", { ascending:false });
+
+
+    if(error){
+
+      console.error(
+        "Supabase Product Loading Error:",
+        error
+      );
+
+      productsContainer.innerHTML = `
+
+        <div style="
+          grid-column:1/-1;
+          text-align:center;
+          padding:35px;
+          color:#667085;
+        ">
+
+          <div style="font-size:42px;margin-bottom:10px;">
+            ⚠️
+          </div>
+
+          <h3>Products Temporarily Unavailable</h3>
+
+          <p style="margin-top:5px;">
+            Please contact us on WhatsApp for current inventory.
+          </p>
+
+        </div>
+
+      `;
+
+      return;
+    }
+
+
+    /* NO PRODUCTS */
+
+    if(!data || data.length === 0){
+
+      productsContainer.innerHTML = `
+
+        <div style="
+          grid-column:1/-1;
+          text-align:center;
+          padding:35px;
+          color:#667085;
+        ">
+
+          <div style="font-size:42px;margin-bottom:10px;">
+            📦
+          </div>
+
+          <h3>Products Coming Soon</h3>
+
+          <p style="margin-top:5px;">
+            Current inventory is being updated.
+            Contact us on WhatsApp for available products.
+          </p>
+
+          <a
+            href="https://wa.me/917276390872?text=Hello%20YUG%20FUTURE%20SOLUTIONS%2C%20please%20share%20your%20current%20available%20inventory."
+            style="
+              display:inline-block;
+              margin-top:16px;
+              background:#16a34a;
+              color:#fff;
+              padding:11px 18px;
+              border-radius:8px;
+              font-size:13px;
+              font-weight:700;
+            "
+          >
+            Ask on WhatsApp
+          </a>
+
+        </div>
+
+      `;
+
+      return;
+    }
+
+
+    /* PRODUCTS */
+
+    productsContainer.innerHTML = data.map(product => {
+
+      const image = product.image_url
+
+        ? `
+          <img
+            src="${product.image_url}"
+            alt="${product.name || "YUG FUTURE SOLUTIONS product"}"
+            loading="lazy"
+          >
+        `
+
+        : `
+          <div style="font-size:68px;">
+            ⚡
+          </div>
+        `;
+
+
+      const hasPrice =
+        product.show_price === true &&
+        product.price !== null &&
+        product.price !== undefined &&
+        product.price !== "";
+
+
+      const price = hasPrice
+
+        ? `₹${Number(product.price).toLocaleString("en-IN")}`
+
+        : "Get Best Price";
+
+
+      const whatsappText =
+        `Hello YUG FUTURE SOLUTIONS, I am interested in ${product.name || "this product"}. Please share details and best price.`;
+
+
+      return `
+
+        <div class="product">
+
+          <div class="product-image">
+            ${image}
+          </div>
+
+
+          <div class="product-info">
+
+            <h3>
+              ${product.name || "Product"}
+            </h3>
+
+
+            <p>
+
+              ${
+                product.brand
+                  ? product.brand + " • "
+                  : ""
+              }
+
+              ${
+                product.category || ""
+              }
+
+              ${
+                product.condition
+                  ? " • " + product.condition
+                  : ""
+              }
+
+            </p>
+
+
+            ${
+              hasPrice
+
+              ? `
+                <strong style="
+                  display:block;
+                  margin-top:10px;
+                  font-size:18px;
+                  color:#101828;
+                ">
+                  ${price}
+                </strong>
+              `
+
+              : ""
+            }
+
+
+            <a
+              class="enquire"
+              href="https://wa.me/917276390872?text=${encodeURIComponent(whatsappText)}"
+            >
+
+              ${
+                hasPrice
+                  ? "Enquire Now"
+                  : "Get Best Price"
+              }
+
+            </a>
+
+          </div>
+
+        </div>
+
+      `;
+
+    }).join("");
+
+
+  }
+
+  catch(error){
+
+    console.error(
+      "Unexpected Product Loading Error:",
+      error
+    );
+
+    productsContainer.innerHTML = `
+
+      <div style="
+        grid-column:1/-1;
+        text-align:center;
+        padding:35px;
+        color:#667085;
+      ">
+
+        <div style="font-size:42px;margin-bottom:10px;">
+          ⚠️
+        </div>
+
+        <h3>Unable to Load Products</h3>
+
+        <p style="margin-top:5px;">
+          Please contact us on WhatsApp for current inventory.
+        </p>
+
+      </div>
+
+    `;
+
+  }
+
+}
+
+
+/* START PRODUCT LOADING */
+
+loadProducts();
 
 </script>
 
